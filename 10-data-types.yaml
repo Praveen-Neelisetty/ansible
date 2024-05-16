@@ -14,4 +14,4 @@
   tasks:
     - name: print
       ansble.builtin.debug:
-        msg: I am Learning {{Course}}, having experience in {{Experience}} and Knowledge on {{Tools}}, having a Project {{Project}}
+        msg: "I am Learning {{Course}}, having experience in {{Experience}} and Knowledge on {{Tools}}, having a Project {{Project}}"
