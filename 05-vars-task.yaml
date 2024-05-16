@@ -1,0 +1,17 @@
+- name: Print Information
+  hosts: localhost
+  vars:
+    Name: "Praveen"
+    Topic: "Ansible"
+  tasks:
+    - name: Print Information
+      ansible.builtin.debug:
+        msg: "Hi My Name is {{Name}} and I am learning {{Topic}}"
+
+    tasks:
+    vars: # Task level variables
+      Name: "Naveen"
+      Topic: "Shell"
+    - name: Print Override variable Information
+      ansible.builtin.debug:
+        msg: "Hi My Name is {{Name}} and I am learning {{Topic}}"
