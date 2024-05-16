@@ -1,6 +1,10 @@
 [web]
 172.31.30.12
 
+[web:vars]
+Name="Praveen"
+Topic="Ansible"
+
 [db]
  172.31.26.198
 

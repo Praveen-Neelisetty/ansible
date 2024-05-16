@@ -1,0 +1,8 @@
+- name: Get and Print Variables from inventory vars
+  hosts: web
+  vars:
+    Time: "8.00 PM"
+  tasks:
+    - name: Print variables
+      ansible.builtin.debug:
+        msg: "My Name is {{Name}} I am learning {{Topic}} at {{Time}}"
