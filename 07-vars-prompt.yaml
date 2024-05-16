@@ -1,6 +1,6 @@
 - name: Print Information by Prompt
   hosts: web
-  var_prompt:
+  vars_prompt:
     - name: USERNAME
       prompt: "Please Enter your Username: "
       private: false
