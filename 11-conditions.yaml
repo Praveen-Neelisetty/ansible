@@ -6,6 +6,10 @@
       ansible.builtin.command: id expense
       register: USER
 
+    - name: print USER information
+      ansible.builtin.debug:
+        msg: user information {{USER}}
+
     - name: say hello
       ansible.builtin.debug:
         msg: "Hello"
