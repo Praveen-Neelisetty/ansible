@@ -1,0 +1,8 @@
+- name: Print Information by declaring variables in vars file
+  hosts: web
+  vars_files:
+    - vars.yaml
+  tasks:
+    - name: Print Information
+      ansible.builtin.debug:
+        msg: My Name is {{Name}} I am learning {{Topic}}
