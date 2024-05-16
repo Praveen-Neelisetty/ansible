@@ -4,10 +4,10 @@
     - name: USERNAME
       prompt: "Please Enter your Username: "
       private: false
-    -name: PASSWORD
+    - name: PASSWORD
       prompt: "Please Enter your Password: "
       private: false
   tasks:
     - name: Print Username and Password
       ansible.builtin.debug:
-       msg: "Hi, My Username is: {{USERNAME}} and Password: {{PASSWORD}}"
+        msg: "Hi, My Username is: {{USERNAME}} and Password: {{PASSWORD}}"
