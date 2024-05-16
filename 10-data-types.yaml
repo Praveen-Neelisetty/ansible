@@ -1,5 +1,5 @@
 - name: Data Types in Ansible
-  host: web
+  hosts: web
   vars:
     Course: Devops with AWS # string
     Tools: # list
