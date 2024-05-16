@@ -1,0 +1,6 @@
+- name: Print Vars value from Arguments
+  hosts: localhost
+  tasks:
+    - name: Print variable value
+      ansible.builtin.debug:
+        msg: "Hi My Name is {{Name}} and I am learning {{Topic}}"
