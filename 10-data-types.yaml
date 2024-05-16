@@ -1,0 +1,17 @@
+- name: Data Types in Ansible
+  host: web
+  vars:
+    Course: Devops with AWS # string
+    Tools: # list
+      - Ansible
+      - Terraform
+      - Docker
+    Experience: # map or dictionary
+      Devops: 3
+      AWS: 2
+    Project: true # boolean
+
+  tasks:
+    - name: print
+      ansble.builtin.debug:
+        msg: I am Learning {{Course}}, having experience in {{Experience}} and Knowledge on {{Tools}}, having a Project {{Project}}
