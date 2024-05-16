@@ -8,11 +8,9 @@
       ansible.builtin.debug:
         msg: "Hi My Name is {{Name}} and I am learning {{Topic}}"
 
-
-  vars: # Task level variables
-    Name: "Naveen"
-    Topic: "Shell"
-  tasks:
     - name: Print Override variable Information
+      vars: # Task level variables
+        Name: "Naveen"
+        Topic: "Shell"
       ansible.builtin.debug:
         msg: "Hi My Name is {{Name}} and I am learning {{Topic}}"
