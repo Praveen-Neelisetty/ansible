@@ -1,6 +1,6 @@
 - name: install softwares/packages
   hosts: web
-  become: true
+  become: yes
   tasks:
     - name: install packages
       ansible.builtin.dnf:
