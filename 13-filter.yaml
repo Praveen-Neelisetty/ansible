@@ -3,7 +3,7 @@
 - name: default variable
   hosts: web
   tasks:
-   - name: Print value
+  - name: Print value
     ansible.builtin.debug:
       msg: "variable is {{string | default('Hello Praveen')}}"
 
@@ -13,8 +13,8 @@
     list: [1,2,3,4,5]
   tasks: Print Max and Min Value
   - name: Print Max and Min Value from list
-      ansible.builtin.debug:
-        msg: "Minimum value is {{list | min}} and Maximum value is {{list | max}}"
+    ansible.builtin.debug:
+      msg: "Minimum value is {{list | min}} and Maximum value is {{list | max}}"
 
 - name: Convert to Uppercase and Lowercase
   hosts: web
@@ -22,9 +22,9 @@
     greeting: "Hello Good Morning"
   tasks:
   - name: Print greeting with uppercase and lowercase
-      ansible.builtin.debug:
-        msg: "greeting in Upper case {{greeting | upper}}"
-        msg: "greeting in Upper case {{greeting | lower}}"
+    ansible.builtin.debug:
+      msg: "greeting in Upper case {{greeting | upper}}"
+      msg: "greeting in Upper case {{greeting | lower}}"
 
 - name: Get Unique string from list
   hosts: web
@@ -43,9 +43,9 @@
     Topic: Ansible
     Time: 12 hrs
   tasks:
-    - name: Convert dictionary to list
-      ansible.builtin.debug:
-        msg: "Converted List is {{data_dictionary | dic2items}}"
+  - name: Convert dictionary to list
+    ansible.builtin.debug:
+      msg: "Converted List is {{data_dictionary | dic2items}}"
 
 - name: Convert list to dictionary 
   hosts: web
@@ -55,6 +55,6 @@
     - {'key': 'Praveen', 'value': 'Ansible'}
     - {'key': 'Naveen', 'value': 'DevOps'}
   tasks:
-   - name: Convert dictionary to list
+  - name: Convert dictionary to list
     ansible.builtin.debug:
       msg: "Convert dictionary to list {{data_list}} and 2nd one {{data_list2}}"
