@@ -4,8 +4,8 @@
   tasks:
     - name: install and Unistall Packages
       ansible.builtin.dnf:
-        name: "{{item}}"
-        state: "{{item}}"
+        name: "{{ item }}"
+        state: "{{ item }}"
       loop:
         - { name: 'mysql', state: 'absent' }
         - { name: 'nginx', state: 'latest' }
