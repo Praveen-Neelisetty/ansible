@@ -7,10 +7,10 @@
     ansible.builtin.debug:
       msg: "variable is {{string | default('Hello Praveen')}}"
 
-- name: default variable
+- name: Minimum and Maximum values
   hosts: web
   vars:
-    list: [1,2,3,4,5]
+    list: [1, 2, 3, 4, 5]
   tasks: Print Max and Min Value
   - name: Print Max and Min Value from list
     ansible.builtin.debug:
