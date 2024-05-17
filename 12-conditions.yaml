@@ -1,16 +1,16 @@
 - name: check number
   hosts: web
-  vars_prompt:
+  vars_prompt: #prompts are always consider as string/text
     - name: Number
       prompt: Enter your Number
-      private: false
+      private: no
   tasks:
     - name: Validating Number is less than 10
       ansible.builtin.debug:
-        msg: {{Number}} is less than 10
+        msg: Given {{Number}} is less than 10
       when: Number | int < 10
-    
+
     - name: Validating Number is greater than or equal to 10
       ansible.builtin.debug:
-        msg: {{Number}} is greater than or equal to 10
+        msg: Given {{Number}} is greater than or equal to 10
       when: Number | int >= 10
