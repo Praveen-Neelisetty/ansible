@@ -4,8 +4,8 @@
     - name: Print Names
       ansible.builtin.debug:
         msg: "Hello {{item}}"
-        loop:
-          - Ansible
-          - Docker
-          - Jenkins
-          - Terraform
+      loop:
+        - Ansible
+        - Docker
+        - Jenkins
+        - Terraform
