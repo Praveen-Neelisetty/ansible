@@ -45,7 +45,7 @@
   tasks:
   - name: Convert dictionary to list
     ansible.builtin.debug:
-      msg: "Converted List is {{data_dictionary | dic2items}}"
+      msg: "Converted List is {{data_dictionary | dict2items}}"
 
 - name: Convert list to dictionary 
   hosts: web
@@ -57,4 +57,4 @@
   tasks:
   - name: Convert dictionary to list
     ansible.builtin.debug:
-      msg: "Convert dictionary to list {{data_list}} and 2nd one {{data_list2}}"
+      msg: "Convert dictionary to list {{data_list | items2dict}} and 2nd one {{data_list2 | items2dict}}"
