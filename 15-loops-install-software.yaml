@@ -5,7 +5,7 @@
       ansible.builtin.dnf:
         name: { { item } }
         state: latest
-        loop:
-          - mysql
-          - nginx
-          - postfix
+      loop:
+        - mysql
+        - nginx
+        - postfix
