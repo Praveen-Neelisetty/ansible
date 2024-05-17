@@ -50,11 +50,14 @@
 - name: Convert list to dictionary 
   hosts: web
   vars:
-    data_list: ['Praveen', 'Naveen']
-    # data_list2: 
-    # - {'key': 'Praveen', 'value': 'Ansible'}
-    # - {'key': 'Naveen', 'value': 'DevOps'}
+    data_list1:
+    - {'key': 'Praveen', 'value': 'Ansible'}
+    - {'key': 'Naveen', 'value': 'DevOps'}
+    data_list2: 
+    - {'key': 'Krishna', 'value': 'Docker'}
+    - {'key': 'Rama', 'value': 'Terraform'}
   tasks:
   - name: Convert dictionary to list
     ansible.builtin.debug:
-      msg: "Convert dictionary to list {{data_list | items2dict}}" #and 2nd one {{data_list2 | items2dict}}"
+      msg: "Convert dictionary to list2 {{data_list2 | items2dict}}"
+      msg: "Convert dictionary to list1 {{data_list1 | items2dict}}"
