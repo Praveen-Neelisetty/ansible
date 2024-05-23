@@ -16,8 +16,8 @@
       ansible.builtin.dnf:
         name: "{{item}}"
         state: latest
-        loop:
+      loop:
           - mysql
           - postgresql
           - fail2ban
-          - ncdu
+          - ncdu  
