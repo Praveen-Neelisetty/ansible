@@ -1,0 +1,9 @@
+- name: Practice Ansible
+  hosts: localhost
+  vars:
+    Name: "Praveen"
+    Topic: "Ansible"
+  tasks:
+    - name: Print Name and Topic
+      ansible.builtin.debug:
+        msg: My Name is {{Name}} and Topic is {{Topic}}
