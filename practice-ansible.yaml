@@ -37,5 +37,5 @@
 
   tasks:
     - name: Print OUTPUT 
-      ansible.builtin.dnf:
+      ansible.builtin.debug:
         msg: {{ OUTPUT }} 
