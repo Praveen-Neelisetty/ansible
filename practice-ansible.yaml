@@ -1,5 +1,6 @@
 - name: Practice Ansible
   hosts: localhost
+  become: true
   vars:
     Name: "Praveen"
     Topic: "Ansible"
@@ -10,3 +11,13 @@
         Topic: "Terraform"
       ansible.builtin.debug:
         msg: My Name is {{Name}} and Topic is {{Topic}}
+  tasks:
+    - name: Install Paskages
+      ansible.builtin.dnf:
+        name: "{{item}}"
+        state: latest
+        loop:
+          - mysql
+          - postgresql
+          - fail2ban
+          - ncdu
