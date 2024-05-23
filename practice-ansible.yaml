@@ -25,8 +25,8 @@
   tasks:
     - name: Uninstall Packages
       ansible.builtin.dnf:
-        name: "{{item.key}}"
-        state: "{{item.value}}"
+        name: "{{item.package}}"
+        state: "{{item.state}}"
       loop:
       - {package: 'mysql', state: 'latest'}
       - {package: 'postgresql', state: 'absent'}
