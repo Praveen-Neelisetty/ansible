@@ -5,5 +5,8 @@
     Topic: "Ansible"
   tasks:
     - name: Print Name and Topic
+      vars:
+        Name: "Akash"
+        Topic: "Terraform"
       ansible.builtin.debug:
         msg: My Name is {{Name}} and Topic is {{Topic}}
