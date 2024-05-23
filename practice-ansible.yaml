@@ -20,4 +20,15 @@
           - mysql
           - postgresql
           - fail2ban
-          - ncdu  
+          - ncdu
+
+  tasks:
+    - name: Uninstall Packages
+      ansible.builtin.dnf:
+        name: "{{item.key}}"
+        state: "{{item.value}}"
+      loop:
+      - {'mysql','latest'}
+      - {'postgresql','absent'}
+      - {'fail2ban','absent'}
+      - {'ncdu','latest'}   
