@@ -34,8 +34,3 @@
       - {'postgresql','absent'}
       - {'fail2ban','absent'}
       - {'ncdu','latest'}   
-
-  tasks:
-    - name: Print OUTPUT 
-      ansible.builtin.debug:
-        msg: {{ OUTPUT }} 
