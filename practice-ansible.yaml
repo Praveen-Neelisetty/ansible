@@ -27,6 +27,7 @@
       ansible.builtin.dnf:
         name: "{{item.key}}"
         register: OUTPUT
+        ignore_errors: true
         state: "{{item.value}}"
       loop:
       - {'mysql','latest'}
@@ -38,4 +39,3 @@
     - name: Print OUTPUT 
       ansible.builtin.dnf:
         msg: {{ OUTPUT }} 
-        
