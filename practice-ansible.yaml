@@ -26,9 +26,16 @@
     - name: Uninstall Packages
       ansible.builtin.dnf:
         name: "{{item.key}}"
+        register: OUTPUT
         state: "{{item.value}}"
       loop:
       - {'mysql','latest'}
       - {'postgresql','absent'}
       - {'fail2ban','absent'}
       - {'ncdu','latest'}   
+
+  tasks:
+    - name: Print OUTPUT 
+      ansible.builtin.dnf:
+        msg: {{ OUTPUT }} 
+        
