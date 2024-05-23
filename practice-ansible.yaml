@@ -38,4 +38,4 @@
   tasks:
     - name: Print OUTPUT 
       ansible.builtin.debug:
-        msg: {{ OUTPUT }} 
+        msg: "{{ OUTPUT }}" 
